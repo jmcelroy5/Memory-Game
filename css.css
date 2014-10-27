@@ -1,0 +1,31 @@
+div#container {
+	background: #1c68bb; 
+	height: 540px;
+	width: 800px;
+	padding: 24px;
+	border: black 1px solid;
+	margin: 0 auto;
+}
+
+div#container > div {
+	background-image: url(cat.jpg); 
+	border: black 1px solid;
+	width: 71px;
+	height: 71px;
+	margin: 10px;
+	padding: 20px;
+	float: left;
+	font-size: 64px;
+	text-align: center;
+	color: #1c68bb;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 3em;
+    margin: 10px;
+}
+
+body{
+	text-align: center;
+}
