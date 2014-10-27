@@ -14,9 +14,14 @@ function newBoard(){
 	}
 }
 
+function shuffle(o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
 function MemoryFlip(tile, value){
+
 	if (tile.innerHTML === "" && memory_values.length < 2){
-	// If tile is 
 		tile.style.background = "#ffffff";
 		tile.innerHTML = value;
 		memory_values.push(value);
@@ -24,7 +29,6 @@ function MemoryFlip(tile, value){
 	}
 
 	if (memory_values.length == 2){
-	// If two cards are flipped over, compare the values
 		if (memory_values[0] == memory_values[1]){
 			tiles_matched += 2;
 			memory_values = [];
@@ -48,22 +52,12 @@ function MemoryFlip(tile, value){
 
 	if (tiles_matched == memory_array.length){
 		function wonGame(){
-			document.getElementById("container").innerHTML = "You win!"
+			document.getElementById("container").innerHTML = "<h1>You win!</h1>";
 		}
+		wonGame();
 	}
 }
 
-
-
-// 	When tiles_matched == memory_array:
-// 		they won the game
-			
-
-function shuffle(o){ 
-	// Shuffles array (found on stack overflow)
-    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
-};
 
 newBoard();
 
