@@ -58,6 +58,5 @@ function MemoryFlip(tile, value){
 	}
 }
 
-
 newBoard();
 
