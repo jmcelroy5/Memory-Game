@@ -6,11 +6,11 @@ var tiles_matched = 0;
 
 function newBoard(){
 	shuffle(memory_array);
-																// The following creates a new array of tile objects that mirrors the memory array
-	var tileDivs = memory_array.map(function(value,index){		// Map over each item in memory array (param: current memory value and current index)
+											// The following creates a new array of tile objects that mirrors the memory array
+	var tileDivs = memory_array.map(function(value,index){				// Map over each item in memory array (param: current memory value and current index)
 		var tile = document.createElement("div");				// Create a new tile div object
 		tile.addEventListener('click', function() {				// Then add a click event listener to it which will...
-			MemoryFlip(tileDivs[index], value);					// Call MemoryFlip, passing tile object and corresponding letter value
+			MemoryFlip(tileDivs[index], value);				// Call MemoryFlip, passing tile object and corresponding letter value
 		});
 		document.getElementById("container").appendChild(tile);
 		return tile;	
